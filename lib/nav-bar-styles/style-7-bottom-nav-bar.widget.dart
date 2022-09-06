@@ -24,20 +24,30 @@ class BottomNavStyle7 extends StatelessWidget {
             decoration: isSelected
                 ? BoxDecoration(
                     color: isSelected
-                        ? item.activeColorPrimary
+                        ? item.gradients != null
+                            ? null
+                            : item.activeColorPrimary
                         : this
                             .navBarEssentials!
                             .backgroundColor!
                             .withOpacity(0.0),
+                    gradient: item.gradients == null
+                        ? null
+                        : !isSelected != null
+                            ? null
+                            : item.gradients,
                     borderRadius: BorderRadius.all(Radius.circular(100)),
                   )
                 : BoxDecoration(
                     color: isSelected
-                        ? item.activeColorPrimary
+                        ? item.gradients != null
+                            ? null
+                            : item.activeColorPrimary
                         : this
                             .navBarEssentials!
                             .backgroundColor!
                             .withOpacity(0.0),
+                    gradient: !isSelected ? null : item.gradients,
                     borderRadius: BorderRadius.all(Radius.circular(100)),
                   ),
             child: Container(

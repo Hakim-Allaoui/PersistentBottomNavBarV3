@@ -14,6 +14,9 @@ class PersistentBottomNavBarItem {
   /// Color for the current selected item in the navigation bar. If `activeColorSecondary` property is empty, this will act in its place (recommended). `cupertino activeBlue` by default.
   final Color activeColorPrimary;
 
+  /// Color for the current selected item in the navigation bar. If `activeColorSecondary` property is empty, this will act in its place (recommended). `cupertino activeBlue` by default.
+  final Gradient? gradients;
+
   /// Color for the unselected item(s) in the navigation bar.
   final Color? inactiveColorPrimary;
 
@@ -61,6 +64,7 @@ class PersistentBottomNavBarItem {
       this.title,
       this.contentPadding = 5.0,
       this.activeColorPrimary = CupertinoColors.activeBlue,
+      this.gradients,
       this.activeColorSecondary,
       this.inactiveColorPrimary,
       this.inactiveColorSecondary = CupertinoColors.systemGrey,
