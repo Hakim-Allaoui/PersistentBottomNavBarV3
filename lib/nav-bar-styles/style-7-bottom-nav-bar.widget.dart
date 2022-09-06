@@ -33,7 +33,7 @@ class BottomNavStyle7 extends StatelessWidget {
                             .withOpacity(0.0),
                     gradient: item.gradients == null
                         ? null
-                        : !isSelected != null
+                        : !isSelected
                             ? null
                             : item.gradients,
                     borderRadius: BorderRadius.all(Radius.circular(100)),
